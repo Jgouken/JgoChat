@@ -166,7 +166,7 @@ module.exports = {
                         message.channel.send({
                             embed: {
                                 title: `Created Channel`,
-                                description: `Created the channel <#${newChannel.id}> under the "${message.channel.parent.name}" category with synced permissions!\n\nReact to undo.`
+                                description: `Created the voice channel <#${newChannel.id}> under the "${message.channel.parent.name}" category with synced permissions!\n\nReact to undo.`
                             }
                         }).then((msg) => {
                             msg.react('↩')
@@ -196,7 +196,7 @@ module.exports = {
                         message.channel.send({
                             embed: {
                                 title: `Created Voice Channel`,
-                                description: `Created the channel <#${newChannel.id}>! Warning: No Category Found!\n\nReact to undo.`
+                                description: `Created the voice channel <#${newChannel.id}>! Warning: No Category Found!\n\nReact to undo.`
                             }
                         }).then((msg) => {
                             msg.react('↩')
@@ -237,7 +237,7 @@ module.exports = {
                             message.channel.send({
                                 embed: {
                                     title: `Created Channel`,
-                                    description: `Created the channel <#${newChannel.id}> under the "${parent.name}" category with synced permissions!\n\nReact to undo.`
+                                    description: `Created the voice channel <#${newChannel.id}> under the "${parent.name}" category with synced permissions!\n\nReact to undo.`
                                 }
                             }).then((msg) => {
                                 msg.react('↩')
