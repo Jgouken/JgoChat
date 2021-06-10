@@ -1,0 +1,21 @@
+{
+  "name": "jgochat",
+  "version": "1.0.0",
+  "description": "Not sure where to go with this.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+  "author": "Jgouken",
+  "license": "ISC",
+
+  "bugs": {
+    "url": "https://github.com/Jgouken/JgoChat/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jgouken/JgoChat.git"
+  },
+  "homepage": "https://github.com/Jgouken/JgoChat#readme"
+}
