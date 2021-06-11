@@ -58,7 +58,7 @@ module.exports = {
                     }
 
                 } else {
-                    message.channel.send(`❌ Use: \`\`\`Hey JgoChat, delete the channel with the id of ${message.channel.id}!\`\`\``)
+                    message.channel.send(`❌ Use: \`\`\`${config.prefix}delete the channel with the id of ${message.channel.id}!\`\`\``)
                 }
             }
         } else if (args.toLocaleLowerCase().trim() == 'this channel') {

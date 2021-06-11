@@ -147,14 +147,14 @@ module.exports = {
                         }
     
                     } else {
-                        message.channel.send(`❌ Use: \`\`\`Hey JgoChat, create a channel (under Text Channels) called Lounge!\`\`\``)
+                        message.channel.send(`❌ Use: \`\`\`${config.prefix}create a channel (under Text Channels) called Lounge!\`\`\``)
                     }
                     
                 } else {
-                    message.channel.send(`❌ Use: \`\`\`Hey JgoChat, create a channel called Lounge!\`\`\``)
+                    message.channel.send(`❌ Use: \`\`\`${config.prefix}create a channel called Lounge!\`\`\``)
                 }
             } else {
-                message.channel.send(`❌ Use: \`\`\`Hey JgoChat, create a channel called Lounge!\`\`\``)
+                message.channel.send(`❌ Use: \`\`\`${config.prefix}create a channel called Lounge!\`\`\``)
             }
         } else if (args.toLocaleLowerCase().startsWith('a voice channel')) {
             var cArgs = args.slice(String('a voice channel').length).trim()
@@ -296,14 +296,14 @@ module.exports = {
                         }
     
                     } else {
-                        message.channel.send(`❌ Use: \`\`\`Hey JgoChat, create a channel (under Text Channels) called Lounge!\`\`\``)
+                        message.channel.send(`❌ Use: \`\`\`${config.prefix}create a channel (under Text Channels) called Lounge!\`\`\``)
                     }
                     
                 } else {
-                    message.channel.send(`❌ Use: \`\`\`Hey JgoChat, create a channel called Lounge!\`\`\``)
+                    message.channel.send(`❌ Use: \`\`\`${config.prefix}create a channel called Lounge!\`\`\``)
                 }
             } else {
-                message.channel.send(`❌ Use: \`\`\`Hey JgoChat, create a voice channel called Lounge!\`\`\``)
+                message.channel.send(`❌ Use: \`\`\`${config.prefix}create a voice channel called Lounge!\`\`\``)
             }
         }
 
