@@ -60,6 +60,36 @@ module.exports = {
                     message.channel.send(`❌ Use: \`\`\`Hey JgoChat, delete the channel with the id of ${message.channel.id}!\`\`\``)
                 }
             }
+        } else if (args.toLocaleLowerCase().trim() == 'this channel') {
+            message.channel.send({
+                embed: {
+                    title: `WARNING: THIS IS UNDOABLE`,
+                    description: `Are you sure you wish to delete this channel? 15 seconds to press ✅.`
+                }
+            }).then((msg) => {
+                msg.react('✅')
+                const filter = (reaction, user) => {
+                    return reaction.emoji.name === '✅' && user.id === message.author.id;
+                };
+                
+                msg.awaitReactions(filter, { max: 1, time: 15000, errors: ['time'] })
+                    .then(async collected => {
+                        msg.edit({
+                            embed: {
+                                title: `Deleting Channel...`,
+                            }
+                        })
+                        await message.channel.delete()
+                        return;
+                    })
+                    .catch(collected => {
+                        return msg.edit({
+                            embed: {
+                                title: `Cancelled.`,
+                            }
+                        });
+                    });
+            })
         }
     }
 }
