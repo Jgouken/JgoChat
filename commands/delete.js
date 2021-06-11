@@ -1,5 +1,6 @@
 module.exports = {
     name: `delete`,
+    description: `delete [the channel with the id of {...} | this channel]`,
 
     async execute(message, args, config, client) {
         if (args.toLocaleLowerCase().startsWith('the channel')) {

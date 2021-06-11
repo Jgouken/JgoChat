@@ -1,5 +1,6 @@
 module.exports = {
     name: `create`,
+    description: `create a (voice) channel (under {...}) called {...}`,
 
     async execute(message, args, config, client) {
         if (!message.guild.member(message.author).hasPermission('MANAGE_CHANNELS')) return message.channel.send(`Sorry, but I can't do that for ya! You don't have permission to manage the channels.`)
@@ -71,8 +72,8 @@ module.exports = {
                         })
                     }
 
-                } else if (cArgs.startsWith('(in ')) {
-                    var caName = (cArgs.slice(String('(in').length).trim())
+                } else if (cArgs.startsWith('(under ')) {
+                    var caName = (cArgs.slice(String('(under').length).trim())
                     var catName = caName.slice(0, caName.search(/[)]/g))
 
                     cArgs = caName.slice((caName.search(/[)]/g) + 1)).trim()
@@ -146,7 +147,7 @@ module.exports = {
                         }
     
                     } else {
-                        message.channel.send(`❌ Use: \`\`\`Hey JgoChat, create a channel (in Text Channels) called Lounge!\`\`\``)
+                        message.channel.send(`❌ Use: \`\`\`Hey JgoChat, create a channel (under Text Channels) called Lounge!\`\`\``)
                     }
                     
                 } else {
@@ -222,8 +223,8 @@ module.exports = {
                         })
                     }
 
-                } else if (cArgs.startsWith('(in ')) {
-                    var caName = (cArgs.slice(String('(in').length).trim())
+                } else if (cArgs.startsWith('(under ')) {
+                    var caName = (cArgs.slice(String('(under').length).trim())
                     var catName = caName.slice(0, caName.search(/[)]/g))
 
                     cArgs = caName.slice((caName.search(/[)]/g) + 1)).trim()
@@ -295,7 +296,7 @@ module.exports = {
                         }
     
                     } else {
-                        message.channel.send(`❌ Use: \`\`\`Hey JgoChat, create a channel (in Text Channels) called Lounge!\`\`\``)
+                        message.channel.send(`❌ Use: \`\`\`Hey JgoChat, create a channel (under Text Channels) called Lounge!\`\`\``)
                     }
                     
                 } else {
